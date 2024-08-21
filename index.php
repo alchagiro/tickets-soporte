@@ -35,11 +35,11 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="registration.php">Regístrate</a>
+            <!--a class="nav-link" href="registration.php">Regístrate</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="login.php">Acceder</a>
-          </li>
+          </li>-->
 
           <li class="nav-item">
             <a class="nav-link" href="admin/">Acceso Admin</a>
