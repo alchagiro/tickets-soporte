@@ -74,7 +74,8 @@ check_login();
                 <div class="grid-title no-border descriptive clickable">
                   <h4 class="semi-bold"><?php echo $row['subject']; ?></h4>
                   <p><span class="text-success bold">Ticket #<?php echo $row['ticket_id']; ?></span> - Fecha de Creación <?php echo $row['posting_date']; ?>
-                    <span class="label label-important"><?php echo $row['status']; ?></span>
+                  <span class="label <?php echo ($row['status'] == 'Open') ? 'label-danger' : 'label-success'; ?>">
+                  <?php echo $row['status']; ?></span>
                   </p>
                   <div class="actions"> <a class="view" href="javascript:;"><i class="fa fa-angle-down"></i></a> </div>
                 </div>

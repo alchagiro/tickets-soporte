@@ -64,7 +64,7 @@
   <!-- Footer -->
   <footer class="py-5">
     <div class="container">
-      <p class="m-0 text-center text-white small">Sistema de Generación de Tickets ACG Tecnologias</p>
+      <p class="m-0 text-center text-white small">Sistema de Generación de Tickets ACG Tecnologias © 2024</p>
     </div>
     <!-- /.container -->
   </footer>

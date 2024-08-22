@@ -74,7 +74,7 @@ if (isset($_POST['update'])) {
                 <h4 class="semi-bold"><?php echo $row['subject']; ?></h4>
                 <h4 class="semi-bold"><?php echo $row['email_id']; ?></h4>
                 <p><span class="text-success bold">Ticket #<?php echo $_SESSION['sid'] = $row['ticket_id']; ?></span> - Fecha de creación <?php echo $row['posting_date']; ?>
-                  <span class="label label-important"><?php echo $row['status']; ?></span>
+                <span class="label <?php echo ($row['status'] == 'Open') ? 'label-danger' : 'label-success'; ?>"><?php echo $row['status']; ?></span>
                   <h6 class="semi-bold"><?php echo $row['prioprity']; ?></h6>
                 </p>
                 <div class="actions"> <a class="view" href="javascript:;"><i class="fa fa-angle-down"></i></a> </div>

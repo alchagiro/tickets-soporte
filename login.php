@@ -19,7 +19,7 @@ if (isset($_POST['login'])) {
     $city = $addrDetailsArr['geoplugin_city'];
     $country = $addrDetailsArr['geoplugin_countryName'];
     ob_start();
-    system('ipconfig /all');
+   // system('ipconfig /all');
     $mycom = ob_get_contents();
     ob_clean();
     $findme = "Physical";
