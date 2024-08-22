@@ -10,7 +10,7 @@ if (isset($_POST['login'])) {
     $_SESSION['id'] = $num['id'];
     $_SESSION['name'] = $num['name'];
     $val3 = date("Y/m/d");
-    date_default_timezone_set("Asia/Calcutta");
+    date_default_timezone_set("America/Bogota");
     $time = date("h:i:sa");
     $tim = $time;
     $ip_address = $_SERVER['REMOTE_ADDR'];
