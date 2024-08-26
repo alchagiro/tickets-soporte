@@ -97,9 +97,10 @@ check_login();
                                                     <td><?php echo $row['mobile']; ?></td>
                                                     <td><?php echo $row['posting_date']; ?></td>
                                                     <td>
-                                                        <form name="abc" action="" method="post">
-                                                            <a href="edit-user.php?id=<?php echo $row['id']; ?>" class="btn btn-primary btn-xs btn-mini rounded-0">Editar</a>
-                                                            <button type="button" class="btn btn-danger btn-xs btn-mini rounded-0">Eliminar</button>
+                                                        <a href="edit-user.php?id=<?php echo $row['id']; ?>" class="btn btn-primary btn-xs">Editar</a>
+                                                        <form action="delete-user.php" method="post" style="display:inline;" onsubmit="return confirm('¿Estás seguro de que deseas eliminar este usuario?');">
+                                                            <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
+                                                            <button type="submit" class="btn btn-danger btn-xs">Eliminar</button>
                                                         </form>
                                                     </td>
                                                 </tr>

@@ -26,5 +26,6 @@
        <li><a href="view-tickets.php"><span class="fa fa-ticket"></span> Ver Tickets</a></li>
        <li><a href="profile.php"><span class="fa fa-user"></span> Perfil</a></li>
        <li><a href="change-password.php"><span class="fa fa-file-text-o"></span> Cambiar Contraseña</a></li>
+       <li><a href="logout.php"><i class="fa fa-power-off"></i>&nbsp;&nbsp;Cerrar Sesión</a></li>
 
      </ul>

@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   } else {
     mysqli_query($con, "insert into user(name,email,password,mobile,gender) values('$name','$email','$password','$mobile','$gender')");
     echo "<script>alert('Tu cuenta ha sido creada correctamente');</script>";
-    echo "<script>window.location.href='login.php'</script>";
+    echo "<script>window.location.href='admin/home.php'</script>";
   }
 }
 ?>

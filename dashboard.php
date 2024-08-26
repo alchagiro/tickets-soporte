@@ -57,17 +57,23 @@ include("dbconnection.php");
               </div>
             </div>
           </div>
+
+					
           <div class="col-md-6 col-sm-6 spacing-bottom-sm spacing-bottom">
             <div class="tiles green added-margin">
               <div class="tiles-body">
                 <div class="controller"> <a href="javascript:;" class="reload"></a> <a href="javascript:;" class="remove"></a> </div>
-                <?php $prequest = mysqli_query($con, "select * from prequest where email='" . $_SESSION['login'] . "'");
-                $pnum = mysqli_num_rows($prequest);
+                <?php // Consulta para contar solo los tickets en estado 'open'
+                $ret = mysqli_query($con, "SELECT COUNT(*) AS open_tickets FROM ticket WHERE email_id='" . $_SESSION['login'] . "' AND status='open'");
+                $row = mysqli_fetch_assoc($ret);
+                $num = $row['open_tickets'];
                 ?>
-                <div class="heading"> <span class="fa fa-ticket"></span>
-                  <a href=" " style="color:#FFF">Total de Consultas</a>
+                <div class="heading">
+                    <a href="view-tickets.php" style="color:#FFF"> Total de Tickets Abiertos</a>
                 </div>
-                <h3 class="text-right text-white"><span class="animate-number" data-value="<?php echo $num; ?>" data-animation-duration="1200"><?= $pnum ?></span></h3>
+                <h3 class="text-right text-white">
+                    <span class="animate-number" data-value="<?php echo $num; ?>" data-animation-duration="1200"><?= $num ?></span>
+                </h3>
               </div>
             </div>
           </div>
